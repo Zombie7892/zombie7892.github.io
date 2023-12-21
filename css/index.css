@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: wheat;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: antiquewhite;
+  background-image: linear-gradient(
+      rgba(216, 212, 195, 0.8),
+      rgba(192, 191, 159, 0.8)
+    ),
+    url(/img/map.jpg);
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+  letter-spacing: 7px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  font-weight: 450;
+}
+
+h3 {
+  margin: 15px;
+}
+
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 15px;
+  text-align: center;
+}
+
+.about-picture {
+  display: block;
+  margin: auto;
+}
+
+#birds {
+  display: flex;
+  justify-content: space-around;
+}
+
+#concepts {
+  display: flex;
+  justify-content: space-around;
+}
+
+.vehicle-picture:hover {
+  border: 2px solid lightslategray;
+  cursor: zoom-in;
+}
+
+.bird-picture:hover {
+  border: 2px solid lightslategray;
+  cursor: zoom-in;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-link {
+  color: black !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: wheat;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20%;
+}
+
+#social-media {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 5px;
+}
+
+#quote {
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
