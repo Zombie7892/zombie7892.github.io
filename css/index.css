@@ -1,12 +1,21 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+#container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
 nav {
   height: 50px;
   position: fixed;
@@ -79,11 +88,13 @@ p {
 #birds {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
 }
 
 #concepts {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
 }
 
 .vehicle-picture:hover {
@@ -152,5 +163,15 @@ form {
   }
   100% {
     background-position: 500%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #birds {
+    flex-wrap: wrap;
+  }
+
+  #concepts {
+    flex-wrap: wrap;
   }
 }
