@@ -1,177 +1,260 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: normal;
+  src: local("IBM Plex Mono"),
+    url("../fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --elbrusPurple: #4520ab;
+  --monoFont: "IBM Plex Mono";
 }
 
+.testDiv {
+    background-color: black;
+    color: wheat;
+    height: 25px;
+    width: 60px;
+    text-wrap: nowrap;
+}
 #container {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 90%;
-  margin: 0 auto;
+  gap: 60px;
 }
-nav {
-  height: 50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  color: wheat;
-  background-color: black;
+
+#inputBlock {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 56px;
+  width: 500px;
+  padding: 0 5px 0 15px;
 }
 
-ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 50px;
-  padding-right: 50px;
-}
-
-li {
-  list-style-type: none;
-}
-
-body {
-  background-color: antiquewhite;
-  background-image: linear-gradient(
-      rgba(216, 212, 195, 0.8),
-      rgba(192, 191, 159, 0.8)
-    ),
-    url(/img/map.jpg);
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
-h1,
-h2 {
+#appTitle {
   text-align: center;
-  margin: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--elbrusPurple);
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--monoFont), monospace;
+  margin: 30px auto 60px auto;
 }
 
-h1 {
-  font-weight: 500;
-  letter-spacing: 7px;
-  background-color: rgba(0, 0, 0, 0.2);
+.clearAll:hover,
+#addButton:hover {
+  cursor: pointer;
+}
+#inputWord:focus {
+  outline: none;
 }
 
-h2 {
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
-  font-weight: 450;
+#inputWord {
+  border: none;
+  background-color: transparent;
 }
 
-h3 {
-  margin: 15px;
-}
-
-p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 15px;
-  text-align: center;
-}
-
-.about-picture {
-  display: block;
-  margin: auto;
-}
-
-#birds {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-#concepts {
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-.vehicle-picture:hover {
-  border: 2px solid lightslategray;
-  cursor: zoom-in;
-}
-
-.bird-picture:hover {
-  border: 2px solid lightslategray;
-  cursor: zoom-in;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: antiquewhite;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.text-link {
-  color: black !important;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 2px;
-}
-
-footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  color: wheat;
+#addButton {
+  height: 38px;
+  width: 107px;
+  color: white;
   background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--monoFont), monospace;
+  font-weight: 400;
+  padding: 0 12px 5px 12px;
 }
 
-form {
+.clearAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: #adadad;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--monoFont), monospace;
+  font-weight: 400;
+  height: 38px;
+  width: 176px;
+  padding: 0 10px;
+}
+
+.removeLine {
+  display: none;
+}
+
+.orderNumberTranslit {
+  display: none;
+  font-family: var(--monoFont), monospace;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#dictionary {
+  display: flex;
+  min-height: 40px;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.ruWord {
+  font-family: var(--monoFont), monospace;
+  font-weight: 400;
+}
+
+.trWord {
+  font-family: var(--monoFont), monospace;
+  font-weight: 400;
+}
+
+#word1 {
+    width: 100%;
+}
+
+#initialWords {
   display: flex;
   flex-direction: column;
-  margin: 20px 20%;
+  border-right: 2px solid black;
+  width: 100%;
 }
 
-#social-media {
-  width: 50%;
+#initialWords .initialWord:first-child {
+  border-top-left-radius: 10px;
+}
+
+#initialWords .initialWord:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+#translitWords .translitWord:first-child {
+  border-top-right-radius: 10px;
+}
+
+#translitWords .translitWord:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.translitWord:last-child,
+.initialWord:last-child {
+  border-bottom: none;
+}
+
+#translitWords {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  gap: 5px;
-  padding: 5px;
+  flex-direction: column;
 }
 
-#quote {
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 5s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+.initialWord {
+  display: flex;
+  align-items: center;
+  height: 41px;
+  background-color: rgb(226, 223, 223);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 500%;
+.translitWord {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 41px;
+  padding: 0 15px;
+  background-color: rgb(179, 173, 173);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+.orderNumberInitial {
+  font-family: var(--monoFont), monospace;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.longWord:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    z-index: 1; 
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;  
+    padding: 8px 16px 10px 16px;
+    overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  #inputBlock,
+  #dictionary {
+    width: 400px;
   }
 }
 
-@media screen and (max-width: 950px) {
-  #birds {
-    flex-wrap: wrap;
+@media screen and (max-width: 480px) {
+  #inputBlock,
+  #dictionary {
+    width: 328px;
   }
 
-  #concepts {
-    flex-wrap: wrap;
+  #appTitle {
+    font-size: 35px;
+  }
+
+  #dictionary {
+    flex-direction: column;
+  }
+
+  .orderNumberTranslit {
+    display: initial;
+  }
+
+  .translitWord {
+    justify-content: left;
+    padding: 0;
+  }
+
+  #initialWords {
+    border-right: none;
+    border-bottom: 2px solid black;
+  }
+
+  #initialWords .initialWord:last-child {
+    border-radius: 0;
+  }
+
+  #initialWords .initialWord:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+
+  #translitWords .translitWord:first-child {
+    border-radius: 0;
+  }
+  #translitWords .translitWord:last-child {
+    border-radius: 0 0 5px 5px;
+  }
+
+  .removeLine,
+  .removeLineT {
+    display: initial;
+    margin-left: auto;
+    margin-right: 7px;
   }
 }
