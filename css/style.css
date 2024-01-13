@@ -46,6 +46,13 @@ button {
   margin-top: 50px;
   width: fit-content;
 }
+
+.button.return{
+  background-color: rgba(132, 187, 13, 0.703);
+  margin-top: 50px;
+  width: fit-content;
+}
+
 input {
   width: 93%;
 }
