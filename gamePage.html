@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script defer  src="index.js"></script>
-    <title>Start Page</title>
+    <script defer src="./game.js"></script>
+    <title>Flash-sniper game</title>
   </head>
   <body>
     <div class="container">
-      <label for="inputName">Введите ваше имя:<input type="text" name="inputName" id="inputName"></label>
-      <button class="button start" id="startGame">Начать игру</button>
+      <div id="greeting"></div>
+      <div id="score">У тебя <span id="points">0</span> очков</div>
+      <div class="square" data-active="true"></div>
+      <button class="button stop" >Остановить игру</button>
     </div>
   </body>
 </html>
