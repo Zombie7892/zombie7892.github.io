@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+p,h1 {
+    color: antiquewhite;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#gameDifficulty {
+    margin: 15px 0;
+}
+
+.gameLevel {
+    padding: 5px;
+    background-color: gold;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.gameField {
+    border: 1px dashed antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 635px;
+}
+
+.card {
+    height: 120px;
+    width: 120px;
+    margin: 30px;
+    border: 1px solid antiquewhite;
+}

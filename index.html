@@ -2,16 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script defer  src="index.js"></script>
-    <title>Start Page</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="js/index.js"></script>
+    <title>Memory game</title>
   </head>
   <body>
     <div class="container">
-      <label for="inputName">Введите ваше имя:<input type="text" name="inputName" id="inputName"></label>
-      <button class="button start" id="startGame">Начать игру</button>
+      <h1>Игра на запоминание!</h1>
+      <p id="rules">
+        <b>Добро пожаловать в игру!</b>
+        <br />
+        Для начала выбери уровень сложности: простой, средний или сложный.
+        <br />
+        Перед тобой высветится поле из карточек , часть из которых будет
+        раскрашена в жёлтый цвет. По истечению времени все карточки окрасятся в
+        белый цвет.
+        <br />
+        Твоя задача - по памяти нажать на нужные карточки , которые были
+        жёлтыми. Будь осторожен , если ты совершишь ошибку - карточка окрасится
+        в красный и ты проиграешь!
+      </p>
+      <div id="gameDifficulty">
+        <button class="gameLevel" id="easy" data-level="easy">Лёгкий</button>
+        <button class="gameLevel" id="middle" data-level="middle">Средний</button>
+        <button class="gameLevel" id="hard" data-level="hard">Сложный</button>
+      </div>
+      <div class="gameField">
+        
+      </div>
     </div>
   </body>
 </html>
