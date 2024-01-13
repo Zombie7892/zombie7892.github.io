@@ -7,7 +7,7 @@ console.log(card);
 
 greetingField.innerText = `Добро пожаловать на испытание, ${localStorage.getItem('currentPlayer')} !`
 stopBtn.addEventListener('click',() =>{
-    window.open('index.html','_self');
+    window.open('./index.html','_self');
 })
 
 function changeColor() {
