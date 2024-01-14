@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/index.css" />
-    <script defer src="js/index.js"></script>
-    <title>Memory game</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="./css/index.css">
+    <script defer src="index.js"></script>
+    <title>Эльбрус Калькулятор</title>
+</head>
+<body>
     <div class="container">
-      <h1>Игра на запоминание!</h1>
-      <p id="rules">
-        <b>Добро пожаловать в игру!</b>
-        <br />
-        Для начала выбери уровень сложности: простой, средний или сложный.
-        <br />
-        Перед тобой высветится поле из карточек , часть из которых будет
-        раскрашена в жёлтый цвет. По истечению времени все карточки окрасятся в
-        белый цвет.
-        <br />
-        Твоя задача - по памяти нажать на нужные карточки , которые были
-        жёлтыми. Будь осторожен , если ты совершишь ошибку - карточка окрасится
-        в красный и ты проиграешь!
-      </p>
-      <div id="gameDifficulty">
-        <button class="gameLevel" id="easy" data-level="easy">Лёгкий</button>
-        <button class="gameLevel" id="middle" data-level="middle">Средний</button>
-        <button class="gameLevel" id="hard" data-level="hard">Сложный</button>
-      </div>
-      <div class="gameField">
-        
-      </div>
+        <h1>Elbrus calculator</h1>
+        <input type="text" id="inputNumber">
+        <h2>История вычислений:</h2>
+        <div class="history">
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+            <div class="operation">
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="btn" id="sum" data-operation="sum">+</button>
+            <button class="btn" id="minus" data-operation="minus">-</button>
+            <button class="btn" id="multiply" data-operation="multiply">X</button>
+            <button class="btn" id="divide" data-operation="divide">/</button>
+            <button class="btn" id="equal">=</button>
+        </div>
     </div>
-  </body>
+</body>
 </html>
