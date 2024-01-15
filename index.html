@@ -1,46 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width"/>
-    <link rel="stylesheet" href="./css/index.css">
-    <script defer src="index.js"></script>
-    <title>Эльбрус Калькулятор</title>
-</head>
-<body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script defer src="js/index.js"></script>
+    <title>Печаттор</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>Elbrus calculator</h1>
-        <input type="text" id="inputNumber">
-        <h2>История вычислений:</h2>
-        <div class="history">
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-            <div class="operation">
-            </div>
-        </div>
-        <div class="buttons">
-            <button class="btn" id="sum" data-operation="sum">+</button>
-            <button class="btn" id="minus" data-operation="minus">-</button>
-            <button class="btn" id="multiply" data-operation="multiply">X</button>
-            <button class="btn" id="divide" data-operation="divide">/</button>
-            <button class="btn" id="equal">=</button>
-        </div>
+      <span id="timer"> </span>
+      <span id="timeFinished"> Время вышло!</span>
+      <div id="gameField"></div>
+      <div class="correctWords">
+        Количество верно введённых слов: <span id="correctWordsCounter">0</span>
+      </div>
+      <div class="restart">Перезапустить игру</div>
     </div>
-</body>
+  </body>
 </html>
